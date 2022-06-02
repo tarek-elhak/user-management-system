@@ -1,0 +1,32 @@
+.SideBarItem {
+  margin: 10px 6px 10px 0;
+}
+.SideBarItem > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(133, 141, 152);
+}
+.SideBarItem > div.Extendible {
+  cursor: pointer;
+}
+.SideBarItem > div.ActiveItem {
+  background-color: rgb(22 163 90);
+
+  color: #fff;
+}
+.SideBarItemIcon {
+  margin-right: 5px;
+}
+.SideBarItem > div h2 {
+  display: flex;
+  padding: 6px 0 6px 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  letter-spacing: -0.01rem;
+}
+
+.SideBarItemArrowIcon {
+  transform: scale(0.7);
+}

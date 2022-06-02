@@ -1,0 +1,7 @@
+.SideBarTitle {
+  text-transform: uppercase;
+  color: rgb(66, 85, 112);
+  letter-spacing: 0.1rem;
+  padding: 6px 4px 6px 10px;
+  margin: 10px 6px 10px 0;
+}
