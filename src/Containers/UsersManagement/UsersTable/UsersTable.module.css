@@ -1,0 +1,19 @@
+.UsersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px 0 15px 50px;
+  text-align: left;
+  border-block: 1px solid rgb(212 212 216);
+  font-size: 0.8rem;
+}
+
+th {
+  background-color: rgb(244, 247, 254);
+  color: rgb(156 163 175);
+  text-transform: capitalize;
+  font-weight: 600;
+}

@@ -1,0 +1,33 @@
+.UsersActions {
+  margin: 20px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.UsersLeftActions {
+  display: flex;
+  align-items: center;
+}
+.UsersLeftActions .UsersSelected {
+  color: #666;
+  font-size: 0.86rem;
+  padding: 3px 12px 3px 0;
+  border-right: 1px solid #888;
+  margin-right: 10px;
+}
+
+.UsersAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(228, 229, 235);
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+.UsersRightActions .UsersAction {
+  margin-right: 0;
+}

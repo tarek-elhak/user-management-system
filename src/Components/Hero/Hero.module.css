@@ -1,6 +1,5 @@
 .Hero {
-  margin-top: 50px;
-  margin-left: 200px;
+  margin: 70px 20px 20px 220px;
   display: flex;
   align-items: center;
   justify-content: space-between;

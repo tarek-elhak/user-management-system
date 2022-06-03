@@ -1,0 +1,57 @@
+.UsersFilters {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.FilterInput {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  padding-block: 10px;
+}
+.Search {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 6px;
+  width: 300px;
+}
+.SearchIcon {
+  margin-top: 4px;
+  margin-inline: 2px;
+  color: #666;
+}
+.SearchFilterInput {
+  width: 90%;
+  color: #555;
+}
+
+.UserFilter {
+  padding-left: 10px;
+  width: 120px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 0.9rem;
+  position: relative;
+}
+.FilterButton {
+  padding-left: 0;
+}
+
+.FilterButton > span {
+  background-color: #fff;
+  position: absolute;
+  top: -10px;
+  padding-inline: 4px;
+  left: 8px;
+  color: #666;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+}
+.UserNameFilter {
+  color: rgb(11, 5, 5);
+}
+.CalenderIcon {
+  color: rgb(176, 176, 178);
+}
