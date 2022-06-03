@@ -1,0 +1,72 @@
+.NewUserModal {
+  width: 450px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.NewUserModal > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: rgb(10, 2, 46);
+  padding: 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.NewUserModal > header > h2 {
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.NewUserModal > header .CloseIcon {
+  color: #fff;
+}
+
+.NewUserModal form {
+  background-color: rgb(244, 247, 254);
+  padding: 20px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.NewUserModal form .UserInput {
+  margin-bottom: 20px;
+}
+.NewUserModal form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  text-transform: capitalize;
+}
+.NewUserModal form input,
+.NewUserModal form select {
+  margin-top: 5px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: rgb(94, 102, 109);
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.FormActions {
+  padding: 10px;
+  border-top: 1px solid rgb(212 212 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.FormActions div {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}

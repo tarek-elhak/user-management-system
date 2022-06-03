@@ -14,22 +14,18 @@ const UsersTable = (props) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>tarek</td>
-          <td>tarek-abdelhak</td>
-          <td>tarek@google.com</td>
-          <td>office</td>
-          <td>active</td>
-          <td>{JSON.stringify(new Date())}</td>
-        </tr>
-        <tr>
-          <td>tarek</td>
-          <td>tarek-abdelhak</td>
-          <td>tarek@google.com</td>
-          <td>office</td>
-          <td>active</td>
-          <td>{JSON.stringify(new Date())}</td>
-        </tr>
+        {props.users.map((user) => {
+          return (
+            <tr key={user.id}>
+              <td>{user.fullName}</td>
+              <td>{user.userName}</td>
+              <td>{user.emailAddress}</td>
+              <td>{user.userGroup}</td>
+              <td>{user.status}</td>
+              <td>{user.createdOn}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

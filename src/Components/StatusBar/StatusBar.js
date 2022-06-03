@@ -5,6 +5,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { greeting } from "../../utils/greeting";
+import { getCurrentDay } from "../../utils/getCurrentDay";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import { getCurrentTime } from "../../utils/getCurrentTime";
 
@@ -14,6 +15,7 @@ const StatusBar = (props) => (
       <KeyboardArrowLeftIcon className={classes.ArrowIcon} />
       <MenuIcon className={classes.HamburgerIcon} />
       <span className={classes.GreetingMessage}>{greeting()}</span>
+      <span className={classes.Now}>{getCurrentDay()}</span>
       <span className={classes.Now}>{getCurrentDate()}</span>
       <span className={classes.Now}>{getCurrentTime()}</span>
     </div>

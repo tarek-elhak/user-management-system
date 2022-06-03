@@ -1,14 +1,23 @@
 .Button {
   text-transform: capitalize;
 }
-.Primary {
+.Primary,
+.Secondary {
   display: flex;
   align-items: center;
   font-weight: 600;
+  font-size: 0.9rem;
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 8px 16px;
+}
+.Primary {
   background-color: rgb(31, 177, 85);
   color: #fff;
+}
+.Secondary {
+  border: 1px solid rgb(212 212 216);
+  background-color: #fff;
+  color: #000;
 }
 .FilterButton {
   width: 100%;
@@ -38,7 +47,8 @@
   padding: 10px;
   font-weight: 600;
 }
-.UsersAction.UsersUnselectAction {
+.UsersAction.UsersUnselectAction,
+.ResetButton {
   font-size: 0.87rem;
   margin-left: -6px;
   text-decoration: underline;

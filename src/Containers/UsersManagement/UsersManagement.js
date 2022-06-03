@@ -8,7 +8,7 @@ const UsersManagement = (props) => {
     <section className={classes.UsersManagement}>
       <UsersFilters />
       <UsersActions />
-      <UsersTable />
+      <UsersTable users={props.users} />
     </section>
   );
 };
