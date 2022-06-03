@@ -1,9 +1,11 @@
 import "./App.module.css";
-import SideBar from "./components/SideBar/SideBar";
+import SideBar from "./Components/SideBar/SideBar";
+import StatusBar from "./Components/StatusBar/StatusBar";
 
 function App() {
   return (
     <div className="App">
+      <StatusBar />
       <SideBar />
     </div>
   );

@@ -1,0 +1,81 @@
+.StatusBar {
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  height: 50px;
+  border-bottom: 1px solid rgb(212 212 216);
+}
+.Greeting {
+  display: flex;
+  align-items: center;
+}
+.Greeting .ArrowIcon {
+  transform: scale(0.7);
+  position: relative;
+  left: 10px;
+}
+.Greeting .HamburgerIcon {
+  margin-right: 10px;
+}
+
+.Greeting .ArrowIcon,
+.Greeting .HamburgerIcon {
+  cursor: pointer;
+}
+
+.GreetingMessage {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.8rem;
+  margin-right: 6px;
+}
+
+.Now {
+  margin-right: 6px;
+  color: #555;
+  font-size: 0.8rem;
+}
+.Status {
+  display: flex;
+  align-items: center;
+}
+.HelpIcon,
+.NotificationIcon,
+.HamburgerIcon.ArrowIcon {
+  color: #444;
+}
+
+.NotificationIcon {
+  margin-left: 10px;
+  box-sizing: content-box;
+  padding-right: 10px;
+  border-right: 1px solid rgb(212 212 216);
+}
+.UserName {
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  text-transform: capitalize;
+  margin: 0 10px 0;
+  font-size: 0.8rem;
+}
+
+.Avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background-color: rgb(224 231 255);
+}
+.Status .ArrowIcon {
+  transform: scale(0.8);
+}
