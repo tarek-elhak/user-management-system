@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./SideBarItem.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import SideBarList from "../../components/SideBar/SideBarList/SideBarList";
+import SideBarList from "../../Components/SideBar/SideBarList/SideBarList";
 
 const SideBarItem = (props) => {
   const [showMenu, setShowMenu] = useState(false);
