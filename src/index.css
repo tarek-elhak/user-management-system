@@ -6,6 +6,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
+  background-color: rgb(244, 247, 254);
 }
 
 *,
@@ -27,4 +28,13 @@ input {
 
 input:focus {
   outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 20px;
 }

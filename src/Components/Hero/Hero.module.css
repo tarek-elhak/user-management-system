@@ -1,0 +1,14 @@
+.Hero {
+  margin-top: 50px;
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainHeading {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+.PlusIcon {
+  transform: scale(0.7);
+}
