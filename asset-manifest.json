@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/user-management-system/static/css/main.3822de49.css",
+    "main.js": "/user-management-system/static/js/main.7a04e7d7.js",
+    "static/media/reno-systems.png": "/user-management-system/static/media/reno-systems.25decd09e917731bbfaf.png",
+    "index.html": "/user-management-system/index.html",
+    "main.3822de49.css.map": "/user-management-system/static/css/main.3822de49.css.map",
+    "main.7a04e7d7.js.map": "/user-management-system/static/js/main.7a04e7d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3822de49.css",
+    "static/js/main.7a04e7d7.js"
+  ]
+}
