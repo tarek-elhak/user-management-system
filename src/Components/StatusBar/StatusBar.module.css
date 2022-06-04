@@ -1,5 +1,4 @@
 .StatusBar {
-  width: calc(100% - 200px);
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -7,8 +6,13 @@
   position: fixed;
   top: 0;
   right: 0px;
+  left: 200px;
   height: 50px;
   border-bottom: 1px solid rgb(212 212 216);
+  transition: left 0.2s ease-in-out;
+}
+.StatusBar.ExpandStatusBar {
+  left: 0;
 }
 .Greeting {
   display: flex;
@@ -17,7 +21,12 @@
 .Greeting .ArrowIcon {
   transform: scale(0.7);
   position: relative;
+}
+.Greeting .ArrowIcon.LeftArrow {
   left: 10px;
+}
+.Greeting .ArrowIcon.RightArrow {
+  right: 20px;
 }
 .Greeting .HamburgerIcon {
   margin-right: 10px;

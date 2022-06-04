@@ -5,6 +5,11 @@
   left: 0;
   width: 200px;
   height: 100vh;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.SideBar.ShrinkSideBar {
+  transform: translateX(-200px);
 }
 .SideBarLogo {
   width: 100px;

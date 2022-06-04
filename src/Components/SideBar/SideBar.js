@@ -6,7 +6,12 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 
 const SideBar = (props) => (
-  <aside className={classes.SideBar}>
+  <aside
+    className={[
+      classes.SideBar,
+      !props.sideBarShown && classes.ShrinkSideBar,
+    ].join(" ")}
+  >
     <img
       src={RenoSystemsLogo}
       alt="reno systems logo"

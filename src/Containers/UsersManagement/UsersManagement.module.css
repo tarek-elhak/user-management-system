@@ -1,7 +1,11 @@
 .UsersManagement {
   margin-left: 220px;
   margin-right: 20px;
+  transition: margin-left 0.2s ease-in-out;
   background-color: #fff;
   border: 1px solid rgb(212 212 216);
   border-radius: 8px;
+}
+.UsersManagement.ExpandUserManagement {
+  margin-left: 20px;
 }

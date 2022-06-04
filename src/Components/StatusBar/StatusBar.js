@@ -1,5 +1,6 @@
 import classes from "./StatusBar.module.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -9,12 +10,29 @@ import { getCurrentDay } from "../../utils/getCurrentDay";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import { getCurrentTime } from "../../utils/getCurrentTime";
 import UserAvatar from "../UI/UserAvatar/UserAvatar";
+import Button from "../UI/Button/Button";
 
 const StatusBar = (props) => (
-  <div className={classes.StatusBar}>
+  <div
+    className={[
+      classes.StatusBar,
+      !props.sideBarShown && classes.ExpandStatusBar,
+    ].join(" ")}
+  >
     <div className={classes.Greeting}>
-      <KeyboardArrowLeftIcon className={classes.ArrowIcon} />
-      <MenuIcon className={classes.HamburgerIcon} />
+      <Button clicked={props.toggleSideBar}>
+        {props.sideBarShown && (
+          <KeyboardArrowLeftIcon
+            className={[classes.ArrowIcon, classes.LeftArrow].join(" ")}
+          />
+        )}
+        <MenuIcon className={classes.HamburgerIcon} />
+        {!props.sideBarShown && (
+          <KeyboardArrowRightIcon
+            className={[classes.ArrowIcon, classes.RightArrow].join(" ")}
+          />
+        )}
+      </Button>
       <span className={classes.GreetingMessage}>{greeting()}</span>
       <span className={classes.Now}>{getCurrentDay()}</span>
       <span className={classes.Now}>{getCurrentDate()}</span>

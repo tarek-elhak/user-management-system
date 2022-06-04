@@ -35,6 +35,7 @@ const usersReducer = (users, action) => {
 
 function App() {
   const [users, dispatchUserAction] = useReducer(usersReducer, []);
+  const [showSideBar, setShowSideBar] = useState(false);
 
   const [showNewUserModal, setShowNewUserModal] = useState(false);
 
@@ -66,6 +67,10 @@ function App() {
     dispatchUserAction({ type: "FILTER_BY_USERNAME", username });
   };
 
+  const sideBarToggledHandler = () => {
+    setShowSideBar((prevShowSideBar) => !prevShowSideBar);
+  };
+
   const addNewUser = (user) => {
     user.id = nanoid();
     user.createdOn = getCurrentDate();
@@ -78,9 +83,15 @@ function App() {
 
   return (
     <div className="App">
-      <StatusBar />
-      <SideBar />
-      <Hero showNewUserModal={showNewUserModalHandler} />
+      <StatusBar
+        sideBarShown={showSideBar}
+        toggleSideBar={sideBarToggledHandler}
+      />
+      <SideBar sideBarShown={showSideBar} />
+      <Hero
+        showNewUserModal={showNewUserModalHandler}
+        sideBarShown={showSideBar}
+      />
       {showNewUserModal && (
         <NewUserModal
           closeNewUserModal={closeNewUserModalHandler}
@@ -94,6 +105,7 @@ function App() {
         unSelectAll={unSelectAllHandler}
         filterByUserName={filterByUserNameHandler}
         removeUsers={removeSelectedUsersHandler}
+        sideBarShown={showSideBar}
       />
     </div>
   );

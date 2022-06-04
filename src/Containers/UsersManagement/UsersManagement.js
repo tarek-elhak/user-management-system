@@ -5,7 +5,12 @@ import classes from "./UsersManagement.module.css";
 
 const UsersManagement = (props) => {
   return (
-    <section className={classes.UsersManagement}>
+    <section
+      className={[
+        classes.UsersManagement,
+        !props.sideBarShown && classes.ExpandUserManagement,
+      ].join(" ")}
+    >
       <UsersFilters filterByUserName={props.filterByUserName} />
       <UsersActions
         users={props.users}
