@@ -82,7 +82,7 @@ const NewUserModal = (props) => {
             />
           </div>
           <div className={classes.UserInput}>
-            <label htmlFor="UserGroup">full name</label>
+            <label htmlFor="UserGroup">user group</label>
             <select
               id="UserGroup"
               name="userGroup"

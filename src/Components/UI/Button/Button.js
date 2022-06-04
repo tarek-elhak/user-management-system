@@ -8,7 +8,7 @@ const Button = (props) => {
     props.allFilters && classes.AllFilters,
     props.usersAction && classes.UsersAction,
     props.assignAction && classes.UsersAssignAction,
-    props.unselectActio && classes.UsersUnselectAction,
+    props.unselectAction && classes.UsersUnselectAction,
     props.resetButton && classes.ResetButton,
   ];
   return (

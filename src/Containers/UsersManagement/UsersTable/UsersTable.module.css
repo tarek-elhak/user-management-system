@@ -17,3 +17,38 @@ th {
   text-transform: capitalize;
   font-weight: 600;
 }
+
+.UsersTable tbody tr td:first-child {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.SelectUserLabel {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -35px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 4px;
+}
+
+.SelectUserInput {
+  display: none;
+}
+
+.CheckIcon {
+  color: transparent;
+}
+
+.SelectUserInput:checked + .SelectUserLabel {
+  background-color: rgb(31, 177, 85);
+}
+
+.SelectUserInput:checked + .SelectUserLabel .CheckIcon {
+  color: #fff;
+  transform: scale(1.1);
+}

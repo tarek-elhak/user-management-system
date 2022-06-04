@@ -6,9 +6,17 @@ import classes from "./UsersManagement.module.css";
 const UsersManagement = (props) => {
   return (
     <section className={classes.UsersManagement}>
-      <UsersFilters />
-      <UsersActions />
-      <UsersTable users={props.users} />
+      <UsersFilters filterByUserName={props.filterByUserName} />
+      <UsersActions
+        users={props.users}
+        selectedUsers={props.selectedUsers}
+        unSelectAll={props.unSelectAll}
+        removeUsers={props.removeUsers}
+      />
+      <UsersTable
+        users={props.users}
+        selectUserHandler={props.selectUserHandler}
+      />
     </section>
   );
 };

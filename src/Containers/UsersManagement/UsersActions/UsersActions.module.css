@@ -10,6 +10,12 @@
   display: flex;
   align-items: center;
 }
+
+.UsersRightActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 .UsersLeftActions .UsersSelected {
   color: #666;
   font-size: 0.86rem;

@@ -8,6 +8,7 @@ import { greeting } from "../../utils/greeting";
 import { getCurrentDay } from "../../utils/getCurrentDay";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import { getCurrentTime } from "../../utils/getCurrentTime";
+import UserAvatar from "../UI/UserAvatar/UserAvatar";
 
 const StatusBar = (props) => (
   <div className={classes.StatusBar}>
@@ -23,7 +24,7 @@ const StatusBar = (props) => (
       <HelpOutlineIcon className={classes.HelpIcon} />
       <NotificationsIcon className={classes.NotificationIcon} />
       <span className={classes.UserName}>tarek abdelhak</span>
-      <div className={classes.Avatar}>ta</div>
+      <UserAvatar>ta</UserAvatar>
       <KeyboardArrowDownIcon className={classes.ArrowIcon} />
     </div>
   </div>

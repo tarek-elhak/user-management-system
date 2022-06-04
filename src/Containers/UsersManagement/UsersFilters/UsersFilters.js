@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
 import classes from "./UsersFilters.module.css";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import Button from "../../../Components/UI/Button/Button";
 
-const UsersFilters = () => {
+const UsersFilters = (props) => {
+  const [userName, setUserName] = useState("");
+
+  const userNameChangedHandler = (event) => {
+    setUserName(event.target.value);
+  };
+
+  useEffect(() => {
+    props.filterByUserName(userName);
+  }, [userName]);
+
   return (
     <div className={classes.UsersFilters}>
       <div className={classes.Search}>
@@ -22,7 +33,9 @@ const UsersFilters = () => {
 
       <input
         type="text"
-        placeholder="user name"
+        placeholder="User Name"
+        value={userName}
+        onChange={userNameChangedHandler}
         className={[
           classes.FilterInput,
           classes.UserFilter,
