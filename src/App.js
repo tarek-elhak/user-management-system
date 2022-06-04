@@ -28,6 +28,10 @@ const usersReducer = (users, action) => {
       );
     case "REMOVE_SELECTED_USERS":
       return users.filter((user) => !user.selected);
+    case "ASSIGN_TO_GROUP":
+      return users.map((user) =>
+        user.selected ? { ...user, userGroup: action.group } : user
+      );
     default:
       throw new Error("this shoudn't be reached !");
   }
@@ -45,6 +49,10 @@ function App() {
 
   const removeSelectedUsersHandler = () => {
     dispatchUserAction({ type: "REMOVE_SELECTED_USERS" });
+  };
+
+  const assignToGroupHandler = (group) => {
+    dispatchUserAction({ type: "ASSIGN_TO_GROUP", group });
   };
 
   const numberOfSelectedUsers = () => {
@@ -106,6 +114,7 @@ function App() {
         filterByUserName={filterByUserNameHandler}
         removeUsers={removeSelectedUsersHandler}
         sideBarShown={showSideBar}
+        assignToGroup={assignToGroupHandler}
       />
     </div>
   );

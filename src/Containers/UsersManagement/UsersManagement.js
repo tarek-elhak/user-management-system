@@ -17,6 +17,7 @@ const UsersManagement = (props) => {
         selectedUsers={props.selectedUsers}
         unSelectAll={props.unSelectAll}
         removeUsers={props.removeUsers}
+        assignToGroup={props.assignToGroup}
       />
       <UsersTable
         users={props.users}

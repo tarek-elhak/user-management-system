@@ -1,3 +1,4 @@
+import { useState } from "react";
 import classes from "./UsersActions.module.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DoNotDisturbIcon from "@mui/icons-material/DoNotDisturb";
@@ -6,8 +7,20 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DownloadIcon from "@mui/icons-material/Download";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Button from "../../../Components/UI/Button/Button";
+import userGroups from "../../../data/userGroups";
 
 const UsersActions = (props) => {
+  const [showUserGroups, setShowUserGroups] = useState(false);
+
+  const showUserGroupsHandler = () => {
+    setShowUserGroups((prevShowUserGroups) => !prevShowUserGroups);
+  };
+
+  const groupChangedHandler = (group) => {
+    setShowUserGroups(false);
+    props.assignToGroup(group);
+  };
+
   return (
     <div className={classes.UsersActions}>
       <div className={classes.UsersLeftActions}>
@@ -35,9 +48,21 @@ const UsersActions = (props) => {
           </Button>
         </div>
         <div className={classes.UsersAction}>
-          <Button usersAction assignAction>
+          <Button usersAction assignAction clicked={showUserGroupsHandler}>
             Assign to Group
           </Button>
+          {showUserGroups && (
+            <ul className={classes.UserGroups}>
+              {userGroups.map((userGroup) => (
+                <li
+                  key={userGroup}
+                  onClick={(e) => groupChangedHandler(userGroup)}
+                >
+                  {userGroup}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={classes.UsersAction}>
           <Button usersAction>
