@@ -39,7 +39,7 @@ const usersReducer = (users, action) => {
 
 function App() {
   const [users, dispatchUserAction] = useReducer(usersReducer, []);
-  const [showSideBar, setShowSideBar] = useState(false);
+  const [showSideBar, setShowSideBar] = useState(true);
 
   const [showNewUserModal, setShowNewUserModal] = useState(false);
 
